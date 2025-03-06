@@ -1,8 +1,39 @@
 # Project Goals & Deliverables: Web-Based Development Board Simulator
+
+## Table of Contents
+1. [Project Description](#project-description)
+2. [Project Structure](#project-structure)
+3. [Project Goals](#project-goals)
+
 ---
 **Project Description:**
 
 An online web-based simulator that allows users to set up and emulate various development boards such as Raspberry Pi, Toradex boards, and Ubuntu environments using QEMU and Docker. This platform will provide a seamless and flexible environment for testing and development. More details will be shared during our meeting.
+
+---
+**Project Structure**
+board-simulator/              
+│── backend/                   # Flask or Express.js backend
+│   │── qemu_control.py        # Flask API to start/stop QEMU
+│   │── chatbot.py             # AI chatbot API (Flask)
+│   │── requirements.txt       # Python dependencies
+│── frontend/                  # React/Vue frontend
+│   │── src/
+│   │── public/
+│   │── package.json
+│── node-red/                  # Node-RED automation flows
+│   │── flows.json             # Node-RED exported flows
+│── qemu/                      # QEMU configuration
+│   │── kernel-qemu            # QEMU kernel file
+│   │── versatile-pb.dtb       # Device tree blob
+│   │── raspios_lite.img       # Raspberry Pi OS image
+│── docker/                    # Dockerization files
+│   │── Dockerfile             # Docker setup for deployment
+│   │── docker-compose.yml     # (Optional) Compose file
+│── docs/                      # Documentation & notes
+│   │── meeting-notes.md
+│── .gitignore                 # Ignore unnecessary files
+│── README.md                  # Project overview
 
 ---
 **Project Goals**
@@ -23,8 +54,3 @@ An online web-based simulator that allows users to set up and emulate various de
 - Implement user session management and resource allocation limits to prevent excessive system load.
 7. Documentation & Knowledge Sharing (requirement)
 - Provide comprehensive guides, tutorials, and API documentation for users.
-
-
-
-
-
